@@ -5,20 +5,19 @@
 ## Login   <simon.lejeune@epitech.eu>
 ## 
 ## Started on  Mon Jan 30 09:40:20 2017 Simon
-## Last update Mon Jan 30 11:42:25 2017 Simon
+## Last update Mon Feb  6 12:06:36 2017 Heroin
 ##
 
-SRC	=
+SRC	=	src/main.c		\
+		src/my_get_nbr.c	\
+		src/my_putnbr.c		\
+		src/my_putchar.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
 NAME	=	navy
 
-CFLAGS	=
-
-all	:	$(NAME)
-
-$(NAME)	:	$(OBJ)
+all	:	$(OBJ)
 		gcc $(OBJ) -o $(NAME)
 
 clean	:
