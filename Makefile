@@ -5,13 +5,13 @@
 ## Login   <simon.lejeune@epitech.eu>
 ## 
 ## Started on  Mon Jan 30 09:40:20 2017 Simon
-## Last update Mon Feb  6 12:06:36 2017 Heroin
+## Last update Tue Feb  7 17:30:17 2017 Heroin
 ##
 
 SRC	=	src/main.c		\
 		src/my_get_nbr.c	\
-		src/my_putnbr.c		\
-		src/my_putchar.c	\
+		src/functions.c		\
+		src/my_str_to_wordtab.c \
 
 OBJ	=	$(SRC:.c=.o)
 

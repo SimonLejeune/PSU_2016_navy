@@ -5,9 +5,11 @@
 ** Login   <victor.herouin@epitech.eu>
 ** 
 ** Started on  Wed Feb  1 17:46:09 2017 Heroin
-** Last update Mon Feb  6 14:48:50 2017 Heroin
+** Last update Mon Feb  6 19:00:09 2017 Heroin
 */
 #include <stdio.h>
+#include <fcntl.h>
+#include <sys/types.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <signal.h>
@@ -57,6 +59,21 @@ void	ennemy_connection()
 }
 int	main(int ac, char **av)
 {
-  connection(ac, av);
+  char **map;
+  char	tm[291];
+  int	fd;
+  int	i;
+  
+  i = 0;
+  fd = open("src/map", O_RDONLY);
+  read(fd, tm, 290);
+  map = my_str_to_wordtab(tm, 10);
+  map[6][2] = 'o';
+  while(i < 10)
+    {
+      printf("%s\n", map[i]);
+      i++;
+    }
+  //  connection(ac, av);
   return(0);
 }
