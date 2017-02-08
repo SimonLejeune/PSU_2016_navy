@@ -5,8 +5,9 @@
 ** Login   <simon.lejeune@epitech.eu>
 **
 ** Started on  Mon Feb  6 18:25:35 2017 Simon LEJEUNE
-** Last update Tue Feb  7 17:25:34 2017 Heroin
+** Last update Tue Feb  7 17:42:52 2017 Simon
 */
+#include <unistd.h>
 #include "../include/my.h"
 
 void	my_putchar(char c)

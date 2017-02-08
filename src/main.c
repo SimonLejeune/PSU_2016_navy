@@ -1,11 +1,11 @@
 /*
 ** main.c for navyyyy in /home/heroin/delivery/PSU/PSU_2016_navy/src
-** 
+**
 ** Made by Heroin
 ** Login   <victor.herouin@epitech.eu>
-** 
+**
 ** Started on  Wed Feb  1 17:46:09 2017 Heroin
-** Last update Mon Feb  6 19:00:09 2017 Heroin
+** Last update Tue Feb  7 17:40:11 2017 Simon LEJEUNE
 */
 #include <stdio.h>
 #include <fcntl.h>
@@ -63,12 +63,12 @@ int	main(int ac, char **av)
   char	tm[291];
   int	fd;
   int	i;
-  
+
   i = 0;
   fd = open("src/map", O_RDONLY);
   read(fd, tm, 290);
   map = my_str_to_wordtab(tm, 10);
-  map[6][2] = 'o';
+  map[2][6] = 'o';
   while(i < 10)
     {
       printf("%s\n", map[i]);
