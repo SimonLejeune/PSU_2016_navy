@@ -1,11 +1,11 @@
 /*
 ** my.h for h for navy in /home/heroin/delivery/PSU/PSU_2016_navy/include
-** 
+**
 ** Made by Heroin
 ** Login   <victor.herouin@epitech.eu>
-** 
+**
 ** Started on  Mon Feb  6 12:06:55 2017 Heroin
-** Last update Mon Feb  6 18:19:34 2017 Heroin
+** Last update Wed Feb  8 16:33:36 2017 Simon LEJEUNE
 */
 int	is_neg(char *str);
 int	is_num(char l);
