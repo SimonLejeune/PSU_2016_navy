@@ -5,9 +5,8 @@
 ** Login   <simon.lejeune@epitech.eu>
 **
 ** Started on  Wed Feb  8 16:29:02 2017 Simon LEJEUNE
-** Last update Thu Feb  9 13:34:01 2017 Simon LEJEUNE
+** Last update Thu Feb  9 15:57:13 2017 Heroin
 */
-
 #include <unistd.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -16,19 +15,20 @@
 #include <string.h>
 #include <stdio.h>
 
-int main(int ac, char **av)
+char	*get_pos(char *s)
 {
   int i;
   int j;
   int fd;
-  char pos[32];
-  char str[50];
+  char *pos;
+  char *str;
 
   i = 0;
   j = 2;
-  fd = open(av[1], O_RDONLY);
+  pos = malloc(sizeof(char) * 33);
+  str = malloc(sizeof(char) * 51);
+  fd = open(s, O_RDONLY);
   read(fd, pos, 32);
-  printf("%s\n", pos);
   while (pos[j] != '\0')
     {
       if (pos[j] != ':' && pos[j] != '\n' && pos[j] != '\0')
@@ -40,5 +40,5 @@ int main(int ac, char **av)
             j = j + 2;
           j++;
     }
-  printf("%s\n", str);
+  return(str);
 }
