@@ -5,7 +5,7 @@
 ** Login   <simon.lejeune@epitech.eu>
 **
 ** Started on  Wed Feb  8 10:46:39 2017 Simon LEJEUNE
-** Last update Wed Feb  8 18:21:00 2017 Simon LEJEUNE
+** Last update Thu Feb  9 18:02:29 2017 Simon LEJEUNE
 */
 
 #include <unistd.h>
@@ -17,14 +17,19 @@
 #include <stdio.h>
 #include "../include/my.h"
 
-char	*pos_to_str(char *pos)
+char	*get_pos(char *pos)
 {
-  char *str;
-  int i;
-  int j;
+  int		i;
+  int		j;
+  int		fd;
+  char	*pos;
+  char	*str;
 
-  str = malloc(sizeof(char) * strlen(pos));
   i = 0;
+  j = 2;
+  str = malloc(sizeof(char) * 51);
+  pos = malloc(sizeof(char) * 33);
+  read(fd, pos, 32);
   while (pos[j] != '\0')
     {
       if (pos[j] != ':' && pos[j] != '\n' && pos[j] != '\0')
@@ -32,6 +37,8 @@ char	*pos_to_str(char *pos)
           str[i] = pos[j];
           i++;
         }
+      else if (pos[j] == '\n')
+	j = j + 2;
       j++;
     }
   return (str);
