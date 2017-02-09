@@ -5,7 +5,7 @@
 ** Login   <simon.lejeune@epitech.eu>
 **
 ** Started on  Wed Feb  8 10:46:39 2017 Simon LEJEUNE
-** Last update Wed Feb  8 16:32:02 2017 Simon LEJEUNE
+** Last update Wed Feb  8 18:21:00 2017 Simon LEJEUNE
 */
 
 #include <unistd.h>
@@ -27,17 +27,12 @@ char	*pos_to_str(char *pos)
   i = 0;
   while (pos[j] != '\0')
     {
-      j = 2;
-      while (pos[j] != '\n')
-      {
-        while (pos[j] != ':' || pos[j] != '\n' || pos[j] != '\0')
-          {
-            str[i] = pos[j];
-            j++;
-          }
-        j++;
-        i++;
-      }
+      if (pos[j] != ':' && pos[j] != '\n' && pos[j] != '\0')
+        {
+          str[i] = pos[j];
+          i++;
+        }
+      j++;
     }
   return (str);
 }
